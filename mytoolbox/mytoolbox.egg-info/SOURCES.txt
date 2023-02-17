@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+mytoolbox/mytoolbox.egg-info/PKG-INFO
+mytoolbox/mytoolbox.egg-info/SOURCES.txt
+mytoolbox/mytoolbox.egg-info/dependency_links.txt
+mytoolbox/mytoolbox.egg-info/requires.txt
+mytoolbox/mytoolbox.egg-info/top_level.txt
