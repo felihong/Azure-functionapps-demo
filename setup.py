@@ -1,7 +1,7 @@
-from setuptools import setup, find_packages
+import setuptools 
 
 
-setup(
+setuptools.setup(
     name='mytoolbox',
     version='0.0.1',
     author='Hong Zhu',
@@ -9,7 +9,6 @@ setup(
     description='Example customized package',
     url='https://github.com/felihong/Azure-functionapps-demo',
     license='MIT',
-    packages=find_packages('mytoolbox'),
-    package_dir={'': 'mytoolbox'},
+    packages=['mytoolbox'],
     install_requires=['requests'],
 )
