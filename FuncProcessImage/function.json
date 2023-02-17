@@ -1,0 +1,35 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob", 
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "mylogos/{name}.png",
+      "connection": ""
+    },
+    {
+      "name": "imgblob", 
+      "type": "blob",
+      "direction": "in",
+      "dataType": "binary",
+      "path": "mylogos/{name}.png",
+      "connection": ""
+    },
+    {
+      "name": "$return",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "mylogos-processed/{name}.png",
+      "direction": "out",
+      "connection": ""
+    },
+    {
+      "name": "outmsg",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "imageprocessing",
+      "connection": ""
+    }
+  ]
+}

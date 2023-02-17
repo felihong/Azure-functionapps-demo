@@ -1,0 +1,31 @@
+{
+  "scriptFile": "api.py",
+  "entryPoint": "reqHandler",
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "authLevel": "function",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "route": "products/{id}"
+    },
+    {
+      "name": "productsJSON",
+      "type": "table",
+      "direction": "in",
+      "tableName": "products",
+      "RowKey": "{id}",
+      "PartitionKey": "{id}",
+      "connection": ""
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}
