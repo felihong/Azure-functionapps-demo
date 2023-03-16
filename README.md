@@ -42,4 +42,23 @@ func azure functionapp publish <Function-App-Name>
 
 ## Durable functions
 
-There are also some examples of Azure durable functions and you can find them in the 
+There are also some examples of Azure durable functions and you can find them in the `DurableFunctions` folder. It contains demos of common durable function patterns including:
+* Function chaing
+* Fan-in/fan-out
+* Async HTTP
+* Monitoring
+* Human interaction
+* Durable entity (aggregator)
+
+Start each of the function project locally after configurating the `local.settings.json`:
+```
+cd ./DurableFunctions/DurableFuncChaining
+func start
+```
+
+## V2 Python programming model
+In the `V2DemoFunctionProj` folder you can find another example demonstrating the newly introduced Azure functions Python V2 programming model. 
+The main benefits of using the new model includes:
+* Simplified folder structure
+* Triggers and bindings defined as decorators, elimination of the usage of `function.json` files
+* Introduction of `blue print` class for better importing behaviors
