@@ -11,7 +11,7 @@
         "get",
         "post"
       ],
-      "route": "webhook"
+      "route": "webhookasync"
     },
     {
       "name": "$return",

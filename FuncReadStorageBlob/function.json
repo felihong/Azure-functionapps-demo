@@ -1,0 +1,29 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "req",
+      "direction": "in",
+      "type": "httpTrigger",
+      "authLevel": "function",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "route": "logos/{name}"
+    },
+    {
+      "name": "obj",
+      "direction": "in",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "mylogos-processed/{name}",
+      "connection": ""
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}

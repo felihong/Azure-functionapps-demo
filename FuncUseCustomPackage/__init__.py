@@ -1,6 +1,7 @@
 import logging
-import time
 import azure.functions as func
+# Import user customized package
+from mytoolbox import userManager
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -16,9 +17,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        # logging.info('Wait for a bit.')
-        # time.sleep(5)
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+        umanager = userManager()
+        rev_name = umanager.reverse_name(name)
+        return func.HttpResponse(f"Hello, {name}. The reversed version of your name is {rev_name}.")
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",

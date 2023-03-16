@@ -1,29 +1,28 @@
 {
-  "scriptFile": "__init__.py",
+  "scriptFile": "api.py",
   "bindings": [
     {
       "name": "req",
-      "direction": "in",
       "type": "httpTrigger",
+      "direction": "in",
       "authLevel": "function",
       "methods": [
         "get",
         "post"
       ],
-      "route": "logos/{name}"
-    },
-    {
-      "name": "obj",
-      "direction": "in",
-      "type": "blob",
-      "dataType": "binary",
-      "path": "mylogos/{name}",
-      "connection": ""
+      "route": "calcFibonacciInsightful"
     },
     {
       "name": "$return",
       "type": "http",
       "direction": "out"
+    },
+    {
+      "name": "msg",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "webhookmsg",
+      "connection": ""
     }
   ]
 }

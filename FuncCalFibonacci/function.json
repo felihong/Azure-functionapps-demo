@@ -1,6 +1,6 @@
 {
   "scriptFile": "api.py",
-  "entryPoint": "returnName",
+  "entryPoint": "reqHandler",
   "bindings": [
     {
       "name": "req",
@@ -11,12 +11,19 @@
         "get",
         "post"
       ],
-      "route": "webhook"
+      "route": "calcFibonacci"
     },
     {
       "name": "$return",
       "type": "http",
       "direction": "out"
+    },
+    {
+      "name": "msg",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "webhookmsg",
+      "connection": ""
     }
   ]
 }
